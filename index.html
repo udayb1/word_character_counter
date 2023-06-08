@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>
+CW COUNTER
+</title>
+<link rel="stylesheet" href="c1.css"/>
+</head>
+
+
+<body>
+<script>
+
+const countwords = () => {
+event.preventDefault()
+let noc = document.getElementById('word').value.length;
+let now=document.getElementById('word').value;
+
+
+let msg=document.getElementById("msg");
+let msg1=document.getElementById("msg1");
+now=now.match( /\w+/g );
+now=now.length;
+
+msg.innerHTML="WORDS ARE"+ " " + now
+msg1.innerHTML="CHARCTERS ARE"+" "+noc
+
+}
+</script>
+
+<center>
+<form>
+<textarea cols="50" rows="4" id="word" resize=none></textarea><br/><br/><br/><br/>
+
+
+<button onclick="countwords()">Count Caracter and words</button>
+
+</form>
+<p id="msg">WORDS ARE</p>
+<p id="msg1">CHARACTERS ARE</p>
+</center>
+</body>
+</html>
